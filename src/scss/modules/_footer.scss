@@ -1,0 +1,30 @@
+footer {
+  width: 100%;
+  background-color: orange;
+  height: 295px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  border: solid black 2px;
+}
+
+footer nav {
+  display: flex;
+  flex-direction: row;
+  border: solid black 2px;
+}
+
+.footer-content .brands,
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  border: solid black 2px;
+}
