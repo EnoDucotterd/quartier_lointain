@@ -18,7 +18,7 @@ footer .footer-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: first baseline baseline;
+  align-items: baseline;
   // border: solid black 2px;
 }
 
@@ -38,10 +38,19 @@ footer nav {
 .footer-links {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  // justify-content: flex-end;
 
   margin-right: 116px;
   // border: solid black 2px;
+}
+
+footer .social {
+  margin: 17px 0;
+}
+
+.footer-content .brands .social-img {
+  height: 40px;
+  margin-right: 28px;
 }
 
 .footer-link {
