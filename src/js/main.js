@@ -2,6 +2,14 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+
+// gsap.set("body", { y: "0" });
+// var tl = gsap.timeline();
+
+// tl.to("body", { y: "-32.5%", delay: 5, duration: 5 });
+
+//
+
 gsap.set(".slider-track", { x: "-48.25%" });
 var tl = gsap.timeline();
 

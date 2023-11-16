@@ -1,6 +1,42 @@
+@keyframes blur {
+  from {
+    filter: blur(4px);
+  }
+
+  to {
+    filter: blur(0px);
+  }
+}
+
+header {
+  position: relative;
+}
+
 .header-welcome {
   background-image: url("../img/train.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  animation-name: blur;
+  animation-duration: 3s;
+}
+
+@keyframes slide {
+  from {
+    right: -20%;
+  }
+
+  to {
+    right: 10%;
+  }
+}
+
+.header-logo {
+  position: absolute;
+  height: 18%;
+  bottom: 10%;
+  right: 10%;
+  z-index: 1;
+  animation-name: slide;
+  animation-duration: 3s;
 }
