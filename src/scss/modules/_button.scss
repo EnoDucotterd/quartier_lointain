@@ -1,0 +1,31 @@
+.slider-button {
+  background-color: #263e5e;
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: solid 3px white;
+  position: absolute;
+  height: 5%;
+  display: flex;
+  padding: 2%;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 100px;
+  transition: ease-out 0.3s;
+  color: #fff;
+}
+
+.slider-button:hover {
+  transform: scale(1.1);
+}
+
+.button-1 {
+  top: 70%;
+  left: 68%;
+}
+
+.button-2 {
+  top: 85%;
+  left: 17%;
+}

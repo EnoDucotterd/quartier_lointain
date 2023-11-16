@@ -4,7 +4,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: beige;
+  background-color: white;
+  color: #263e5e;
 }
 
 .book-area .book-content {
@@ -12,18 +13,36 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
 }
 
-.book-area .packshot {
-  height: 642px;
-  width: 397px;
-  border: solid black 2px;
+// .book-area .book-content {
+//   height: 62%;
+//   align-self: center;
+//   position: relative;
+//   align-self: center;
+// }
+
+// .book-area .packshot {
+//   height: 100%;
+//   // border: solid black 2px;
+//   display: flex;
+//   position: absolute;
+// }
+
+// .book-area .title {
+//   height: 100%;
+//   position: absolute;
+// }
+.book-area.summary {
+  position: absolute;
+  height: 19%;
 }
 
 .book-area .title {
   height: 178px;
   width: 397px;
-  border: solid black 2px;
+  // border: solid black 2px;
 }
 
 .book-area .text-group {
@@ -31,12 +50,66 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  border: solid black 2px;
+  // border: solid black 2px;
+  margin-left: 123px;
+}
+.book-area .autor {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  margin: 30px 0;
+  text-transform: uppercase;
 }
 
 .book-area .summary {
   width: 501px;
   height: 189px;
   flex-shrink: 0;
-  border: solid black 2px;
+  // border: solid black 2px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 28px;
+}
+
+.book-area .info-link {
+  margin-top: 18px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 24px;
+}
+
+.book-area .info-link:hover {
+  text-decoration: underline;
+  transition: ease-out 0.3s;
+}
+
+.book-area .book-button {
+  color: #263e5e;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: 3px solid #263e5e;
+  background: #fff;
+  height: 76px;
+  width: 281px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: ease-out 0.3s;
+  position: absolute;
+  bottom: 0;
+}
+
+.book-area .book-button:hover {
+  color: #fff;
+  background: #263e5e;
 }

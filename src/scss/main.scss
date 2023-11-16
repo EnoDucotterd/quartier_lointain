@@ -1,3 +1,68 @@
+/* appel de la fonte de caractères F37 Bella Pro en version regular */
+
+@font-face {
+  font-family: "DazzedTrial";
+  src: url("../fonts/DazzedTRIAL-Bold.woff2") format("woff2"),
+    url("../fonts/DazzedTRIAL-Bold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "DazzedTrial";
+  src: url("../fonts/DazzedTRIAL-BoldItalic.woff2") format("woff2"),
+    url("../fonts/DazzedTRIAL-BoldItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: bold italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "DazzedTrial";
+  src: url("../fonts/DazzedTRIAL-Light.woff2") format("woff2"),
+    url("../fonts/DazzedTRIAL-Light.woff") format("woff");
+  font-weight: 400;
+  font-style: light;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "DazzedTrial";
+  src: url("../fonts/DazzedTRIAL-Medium.woff2") format("woff2"),
+    url("../fonts/DazzedTRIAL-Medium.woff") format("woff");
+  font-weight: 400;
+  font-style: light italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "DazzedTrial";
+  src: url("../fonts/DazzedTRIAL-LightItalic.woff2") format("woff2"),
+    url("../fonts/DazzedTRIAL-LightItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: medium;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "DazzedTrial";
+  src: url("../fonts/DazzedTRIAL-Regular.woff2") format("woff2"),
+    url("../fonts/DazzedTRIAL-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: medium;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "DazzedTrial";
+  src: url("../fonts/DazzedTRIAL-Heavy.woff2") format("woff2"),
+    url("../fonts/DazzedTRIAL-Heavy.woff") format("woff");
+  font-weight: 400;
+  font-style: medium;
+  font-display: fallback;
+}
+
 @import "base";
 @import "layout";
 @import "modules/example";
@@ -5,3 +70,5 @@
 @import "modules/slider";
 @import "modules/book-area";
 @import "modules/footer";
+@import "modules/button";
+@import "modules/header";
