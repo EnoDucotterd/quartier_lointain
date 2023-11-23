@@ -33,3 +33,120 @@ gsap.registerPlugin(ScrollTrigger);
 // tl.to(".slider-track", { x: "0%", delay: 2, duration: 10 });
 // tl.to(".slider-track", { x: "-10.3%", delay: 2, duration: 5 });
 // tl.to(".slider-track", { x: "-25.75%", delay: 2, duration: 5 });
+
+// var html = document.querySelector("html");
+
+// // Ciblage des boutons dans le document
+// // (le chiffre correspond à la séquence sur laquelle se trouve le bouton)
+// var button1 = document.querySelector("#button-1");
+// var button2 = document.querySelector("#button-2");
+// var button3 = document.querySelector("#button-3");
+// var button4 = document.querySelector("#button-4");
+
+// // On crée autant de verrous que de boutons
+// // (le chiffre correspond à la séquence qui est verrouillée)
+// var lock1 = true;
+// var lock2 = true;
+// var lock3 = true;
+// var lock4 = true;
+
+// // Création de la timeline principale
+// var tlMain = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".slider-mask",
+//     start: "top top",
+//     end: "2000%",
+//     pin: true,
+//     markers: true,
+//     scrub: 1,
+//   },
+// });
+
+// // Déplacement initial du slider
+// tlMain.set(".slider-track", {
+//   x: "-48.25%",
+// });
+
+// // Déplacement du slider de 1 écran vers la droite
+// tlMain.to(".slider-track", {
+//   x: "-66.6666%",
+//   duration: 3,
+//   ease: "power1.inOut",
+//   onComplete: () => {
+//     if (lock5) {
+//       // Si le verrou 5 est actif
+//       html.style.overflow = "hidden"; // Le scroll est bloqué
+//     }
+//   },
+// });
+
+// tlMain.to({}, { duration: 1 });
+
+// // Déplacement du slider de 1 écran vers la droite
+// tlMain.to(".slider-track", {
+//   x: "-94.78%",
+//   duration: 3,
+//   ease: "power1.inOut",
+// });
+
+// // Retour du slider totalement à gauche
+// tlMain.to(".slider-track", {
+//   x: "0%",
+//   duration: 3,
+//   ease: "power1.inOut",
+//   onComplete: () => {
+//     if (lock1) {
+//       // Si le verrou 1 est actif
+//       html.style.overflow = "hidden"; // Le scroll est bloqué
+//     }
+//   },
+// });
+
+// tlMain.to({}, { duration: 1 });
+
+// // Déplacement du slider de 1 écran vers la droite
+// tlMain.to(".slider-track", {
+//   x: "-16.6666%",
+//   duration: 3,
+//   ease: "power1.inOut",
+//   onComplete: () => {
+//     if (lock2) {
+//       // Si le verrou 2 est actif
+//       html.style.overflow = "hidden"; // Le scroll est bloqué
+//     }
+//   },
+// });
+
+// tlMain.to({}, { duration: 1 });
+
+// // Déplacement du slider de 1 écran vers la droite
+// tlMain.to(".slider-track", {
+//   x: "-33.3333%",
+//   duration: 3,
+//   ease: "power1.inOut",
+// });
+
+// // Fin des déplacements
+
+// // Au clic sur les boutons
+
+// button1.addEventListener("click", () => {
+//   html.style.overflow = "auto"; // Le scroll est débloqué
+//   lock1 = false; // Le verrou 1 est désactivé
+// });
+
+// button2.addEventListener("click", () => {
+//   html.style.overflow = "auto"; // Le scroll est débloqué
+//   lock2 = false; // Le verrou 2 est désactivé
+// });
+
+// button3.addEventListener("click", () => {
+//   html.style.overflow = "auto"; // Le scroll est débloqué
+//   lock3 = false; // Le verrou 5 est désactivé
+// });
+// button4.addEventListener("click", () => {
+//   html.style.overflow = "auto"; // Le scroll est débloqué
+//   lock4 = false; // Le verrou 5 est désactivé
+// });
+
+// document.addEventListener("DOMContentLoaded", function () {});
