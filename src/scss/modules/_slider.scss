@@ -72,6 +72,7 @@
 // .screen-12
 
 .box-4 {
+  z-index: 1;
   height: 73%;
   position: absolute;
   top: 10%;
@@ -96,6 +97,7 @@
 // .screen-14
 
 .box-7 {
+  z-index: 1;
   height: 72%;
   position: absolute;
   top: 14%;
@@ -115,6 +117,10 @@
   position: absolute;
   top: 25%;
   align-self: center;
+}
+
+.button-4 {
+  top: 70%;
 }
 // screen-16
 
@@ -193,6 +199,7 @@
 }
 //
 .box-21 {
+  z-index: 1;
   height: 38%;
   position: absolute;
   top: 48%;
@@ -218,6 +225,7 @@
 // screen-2
 
 .box-24 {
+  z-index: 1;
   height: 43%;
   position: absolute;
   top: 15%;
@@ -237,6 +245,11 @@
   position: absolute;
   top: 23%;
   align-self: center;
+}
+
+.button-3 {
+  top: 15%;
+  right: 18%;
 }
 
 // screen-4
