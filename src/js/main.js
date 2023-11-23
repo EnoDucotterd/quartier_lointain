@@ -3,10 +3,72 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// gsap.set("body", { y: "0" });
+// document.querySelector("#cursor");
+// gsap.set(".ball", { xPercent: -50, yPercent: -50 });
+
+// const ball = document.querySelector(".cursor");
+// const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+// const mouse = { x: pos.x, y: pos.y };
+// const speed = 0.2;
+
+// const xSet = gsap.quickSetter(ball, "x", "px");
+// const ySet = gsap.quickSetter(ball, "y", "px");
+
+// window.addEventListener("mousemove", (e) => {
+//   mouse.x = e.x;
+//   mouse.y = e.y;
+// });
+
+// gsap.ticker.add(() => {
+//   // adjust speed for higher refresh monitors
+//   const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
+
+//   pos.x += (mouse.x - pos.x) * dt;
+//   pos.y += (mouse.y - pos.y) * dt;
+//   xSet(pos.x);
+//   ySet(pos.y);
+// });
+const cursor = document.querySelector("#cursor");
+gsap.set(".ball", { xPercent: -50, yPercent: -50 });
+
+const ball = document.querySelector(".cursor");
+const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+const mouse = { x: pos.x, y: pos.y };
+const speed = 0.2;
+
+const xSet = gsap.quickSetter(ball, "x", "px");
+const ySet = gsap.quickSetter(ball, "y", "px");
+
+// Ajouter un écouteur d'événement pour la souris
+window.addEventListener("mousemove", (e) => {
+  mouse.x = e.x;
+  mouse.y = e.y;
+});
+
+// Ajouter un écouteur d'événement pour le survol de la classe "slider-button"
+const sliderButton = document.querySelector(".slider-button");
+sliderButton.addEventListener("mouseenter", () => {
+  cursor.style.display = "none"; // Masquer le curseur lorsque la souris entre dans ".slider-button"
+});
+
+sliderButton.addEventListener("mouseleave", () => {
+  cursor.style.display = "block"; // Afficher à nouveau le curseur lorsque la souris quitte ".slider-button"
+});
+
+gsap.ticker.add(() => {
+  // ajuster la vitesse pour un rafraîchissement plus élevé des moniteurs
+  const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
+
+  pos.x += (mouse.x - pos.x) * dt;
+  pos.y += (mouse.y - pos.y) * dt;
+  xSet(pos.x);
+  ySet(pos.y);
+});
+
+// gsap.set("header", { y: "0" });
 // var tl = gsap.timeline();
 
-// tl.to("body", { y: "-32.5%", delay: 5, duration: 5 });
+// tl.to("header", { y: "-32.5%", delay: 5, duration: 5 });
 
 //
 
@@ -57,7 +119,7 @@ var tlMain = gsap.timeline({
     start: "top top",
     end: "2000%",
     pin: true,
-    markers: true,
+    // markers: true,
     scrub: 1,
   },
 });
@@ -189,5 +251,6 @@ button4.addEventListener("click", () => {
   html.style.overflow = "auto"; // Le scroll est débloqué
   lock4 = false; // Le verrou 5 est désactivé
 });
+//CURSOR ANIMATION
 
 document.addEventListener("DOMContentLoaded", function () {});
