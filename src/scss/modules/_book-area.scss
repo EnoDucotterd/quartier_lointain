@@ -16,21 +16,10 @@
   position: relative;
 }
 
-// .book-area .book-content {
-//   height: 62%;
-//   align-self: center;
-//   position: relative;
-//   align-self: center;
-// }
-
 .book-area .packshot {
   width: 397px;
 }
 
-// .book-area .title {
-//   height: 100%;
-//   position: absolute;
-// }
 .book-area.summary {
   position: absolute;
   height: 19%;
@@ -39,7 +28,6 @@
 .book-area .title {
   height: 178px;
   width: 397px;
-  // border: solid black 2px;
 }
 
 .book-area .text-group {
@@ -47,7 +35,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  // border: solid black 2px;
   margin-left: 123px;
 }
 .book-area .autor {
@@ -63,7 +50,6 @@
   width: 501px;
   height: 189px;
   flex-shrink: 0;
-  // border: solid black 2px;
   font-size: 20px;
   font-style: normal;
   font-weight: 450;

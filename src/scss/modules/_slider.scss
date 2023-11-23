@@ -9,16 +9,12 @@
 }
 
 .slider-mask {
-  // border: 5px solid black;
-  // border-radius: 10px;
   overflow: auto;
 }
 
 .slider-track {
   height: 100%;
   display: inline-flex;
-  // border: 5px solid red;
-  // border-radius: 5px;
 }
 
 .slider-track .screen {
@@ -26,7 +22,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // border: 5px solid blue;
   position: relative;
 }
 

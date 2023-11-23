@@ -41,26 +41,6 @@ header {
   animation-duration: 3s;
 }
 
-// @keyframes indicate {
-//   from {
-//     filter: opacity(0%);
-//   }
-
-//   to {
-//     filter: opacity(100%);
-//   }
-// }
-
-// .header-picto {
-//   position: absolute;
-//   width: 5%;
-//   top: 80%;
-//   left: 48%;
-//   animation-name: indicate;
-//   animation-duration: 2s;
-//   animation-iteration-count: infinite;
-//   transition: ease-out;
-// }
 @keyframes fadeInOut {
   0%,
   100% {
@@ -77,5 +57,6 @@ header {
   width: 5%;
   top: 80%;
   left: 48%;
+  cursor: pointer;
   animation: fadeInOut 3s ease-out infinite;
 }
