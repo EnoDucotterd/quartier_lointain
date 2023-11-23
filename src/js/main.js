@@ -28,6 +28,42 @@ gsap.registerPlugin(ScrollTrigger);
 //   xSet(pos.x);
 //   ySet(pos.y);
 // });
+// const cursor = document.querySelector("#cursor");
+// gsap.set(".ball", { xPercent: -50, yPercent: -50 });
+
+// const ball = document.querySelector(".cursor");
+// const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+// const mouse = { x: pos.x, y: pos.y };
+// const speed = 0.2;
+
+// const xSet = gsap.quickSetter(ball, "x", "px");
+// const ySet = gsap.quickSetter(ball, "y", "px");
+
+// // Ajouter un écouteur d'événement pour la souris
+// window.addEventListener("mousemove", (e) => {
+//   mouse.x = e.x;
+//   mouse.y = e.y;
+// });
+
+// // Ajouter un écouteur d'événement pour le survol de la classe "slider-button"
+// const sliderButton = document.querySelector(".slider-button");
+// sliderButton.addEventListener("mouseenter", () => {
+//   ball.style.display = "none"; // Masquer le curseur lorsque la souris entre dans ".slider-button"
+// });
+
+// sliderButton.addEventListener("mouseleave", () => {
+//   ball.style.display = "block"; // Afficher à nouveau le curseur lorsque la souris quitte ".slider-button"
+// });
+
+// gsap.ticker.add(() => {
+//   // ajuster la vitesse pour un rafraîchissement plus élevé des moniteurs
+//   const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
+
+//   pos.x += (mouse.x - pos.x) * dt;
+//   pos.y += (mouse.y - pos.y) * dt;
+//   xSet(pos.x);
+//   ySet(pos.y);
+// });
 const cursor = document.querySelector("#cursor");
 gsap.set(".ball", { xPercent: -50, yPercent: -50 });
 
@@ -46,13 +82,16 @@ window.addEventListener("mousemove", (e) => {
 });
 
 // Ajouter un écouteur d'événement pour le survol de la classe "slider-button"
-const sliderButton = document.querySelector(".slider-button");
-sliderButton.addEventListener("mouseenter", () => {
-  cursor.style.display = "none"; // Masquer le curseur lorsque la souris entre dans ".slider-button"
-});
+const sliderButtons = document.querySelectorAll(".slider-button");
 
-sliderButton.addEventListener("mouseleave", () => {
-  cursor.style.display = "block"; // Afficher à nouveau le curseur lorsque la souris quitte ".slider-button"
+sliderButtons.forEach((sliderButton) => {
+  sliderButton.addEventListener("mouseenter", () => {
+    ball.style.display = "none"; // Masquer le curseur lorsque la souris entre dans ".slider-button"
+  });
+
+  sliderButton.addEventListener("mouseleave", () => {
+    ball.style.display = "block"; // Afficher à nouveau le curseur lorsque la souris quitte ".slider-button"
+  });
 });
 
 gsap.ticker.add(() => {
@@ -63,6 +102,23 @@ gsap.ticker.add(() => {
   pos.y += (mouse.y - pos.y) * dt;
   xSet(pos.x);
   ySet(pos.y);
+});
+
+// go down
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hideElement = document.getElementById("hide");
+
+  hideElement.addEventListener("click", function () {
+    // Ajouter la classe "hide" pour masquer l'élément après le clic
+    hideElement.classList.add("hide");
+
+    // Utiliser window.scrollTo pour faire défiler la page d'un écran
+    window.scrollBy({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  });
 });
 
 // gsap.set("header", { y: "0" });
